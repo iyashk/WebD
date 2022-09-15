@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="https://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Input Form</legend>
+        <p>
+          <label for="Username"> Username :</label>
+          <input
+            type="text"
+            name="Username"
+            id="Username"
+            placeholder="Username"
+            required
+            autofocus
+            autocomplete="on"
+          />
+        </p>
+        <p>
+          <label for="Fullname"> Fullname :</label>
+          <input
+            type="text"
+            name="Fullname"
+            id="Fullname"
+            placeholder="Fullname"
+            required
+            autofocus
+            autocomplete="on"
+          />
+        </p>
+        <label for="Password">Password :</label>
+        <input
+          type="password"
+          name="Password"
+          id="Password"
+          required
+          placeholder="Password"
+        />
+        <p>
+          <label for="phone">Phone number: </label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="+91 1234567890"
+            pattern="+91 [0-9]{10}"
+          />
+        </p>
+        <p>
+          <label for="year">Year:</label>
+          <input
+            type="number"
+            name="year"
+            id="year"
+            step="1"
+            min="2001"
+            max="2022"
+            placeholder="2000"
+          />
+        </p>
+
+        <p>
+          <label for="items"> select items : </label>
+          <select name="items" id="items">
+            <option value="default">select</option>
+            <optgroup label="Coffees">
+              <option value="regular coffee">Regular Coffee</option>
+              <option value="iced coffee">Iced Coffee</option>
+              <option value="black coffee">Black Coffee</option>
+            </optgroup>
+            <optgroup label="Soft Drinks">
+              <option value="Coke">Coke</option>
+              <option value="Fanta">Fanta</option>
+              <option value="Sprite">Sprite</option>
+            </optgroup>
+            <option value="other">Other</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="items-list">Items-List</label>
+          <input
+            type="text"
+            name="items-list"
+            id="items-list"
+            list="list-items"
+          />
+          <datalist id="list-items">
+            <option value="item1"></option>
+            <option value="item2"></option>
+            <option value="item3"></option>
+            <option value="item4"></option>
+          </datalist>
+        </p>
+        <input type="submit" class="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
