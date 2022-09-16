@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table,
+      td,
+      th,
+      caption {
+        border: 1px solid black;
+        font-family: "Courier New", Courier, monospace;
+        padding: 1rem;
+        border-collapse: collapse;
+        text-align: center;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Little Taco Shop</h1>
+      <nav>
+        <ul>
+          <li><a href="#about"> About US</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="store.html">Store Hours</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img
+          src="download.png"
+          alt="taco shop image"
+          title="Our Taco shop Logo"
+        />
+        <figcaption>Tacos and drinks</figcaption>
+      </figure>
+    </header>
+    <hr />
+    <main>
+      <section id="about">
+        <h2>About <abbr title="Little Taco Shop">LTS</abbr></h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+          aliquid, ea ab asperiores quos impedit, quaerat eos quas neque
+          deserunt expedita voluptatum placeat, eveniet cum voluptas rem
+        </p>
+        <h3>Taco Trivia</h3>
+        <aside>
+          <details>
+            <summary>when did tacos arrive first in USA</summary>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
+            doloribus consectetur maxime nulla perferendis ut harum assumenda,
+            similique rerum fuga consequatur dolorem recusandae ea nostrum
+            dolore earum rem unde fugit.
+          </details>
+        </aside>
+      </section>
+      <hr />
+      <section id="menu">
+        <h2>Our Menu</h2>
+        <table>
+          <thead>
+            <caption>
+              Our tacos
+            </caption>
+            <tr>
+              <th>Tacos</th>
+              <th>Qty</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="3">Crunchy</th>
+              <td>1</td>
+              <td>$1.50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>$2.50</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>$3.50</td>
+            </tr>
+            <tr>
+              <th rowspan="3">Soft</th>
+              <td>1</td>
+              <td>$2.00</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>$3.50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>$4.50</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Chips & Salsa $2</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <section>
+        <p>Copyright &copy; The Litte Taco Shop</p>
+      </section>
+    </footer>
+  </body>
+</html>
