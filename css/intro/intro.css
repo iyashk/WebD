@@ -1,0 +1,27 @@
+body{
+    font-size: 2rem;
+    width: 100%;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+h2{
+    border: dashed 2px black;
+    width: 50%;
+    font-size: 3rem;
+    padding: 8px;
+}
+main{
+    width: 50%;
+    font-size: 2rem;
+    border: 2px solid black;
+    background-color: papayawhip;
+}
+p{
+    font-size: 2rem;
+    /* border: 2px solid black;
+    background-color: papayawhip; */
+    width: 40ch;
+}
