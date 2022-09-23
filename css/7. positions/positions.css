@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body{
+    font-family: Roboto;
+    font-size: 1.5rem;
+    height: 200vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer-container{
+    margin: 5%;
+    position: relative;
+    border: 0.5rem dashed black;
+}
+.inner-container{
+    margin: 5%;
+    border: 0.5rem solid black;
+    /* height: 100vh; */
+}
+
+.box{
+    /* color: white; */
+    height: 150px;
+    width: 150px;
+    padding: 0.5rem;
+}
+.absolute{
+    position: absolute;
+    background-color: blue;
+    top: 10px;
+    left: 20px;
+    /* z-index: 0; */
+}
+.relative{
+    position: relative;
+    background-color: red;
+    top: 20px;
+    /* right: 20px; */
+    left: 20px;
+    /* z-index: 1; */
+}
+
+.fixed{
+    position: fixed;
+    top: 200px;
+    background-color: green;
+    /* z-index: 2; */
+}
+.sticky{
+    position:sticky;
+    background-color: aqua;
+    top: 0;
+
+}
