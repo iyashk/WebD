@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body{
+    font-family: Roboto;
+    font-size:1.5rem; 
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "hd hd hd hd "
+        "mn mn mn sb"
+        "ft ft ft ft";
+    gap: 1rem;
+}
+body > *{
+    /* border: black 2px solid; */
+    /* margin-inline: 5px; */
+}
+.header{
+    grid-area: hd;
+    display: grid;
+    place-content: flex-end;
+}
+.container{
+    grid-area: mn;
+    
+}
+.footer{
+    grid-area: ft ;
+    display: grid;
+    border: 2px solid black;
+    line-height: 7rem;
+    place-content: center;
+    background-color: bisque;
+}
+.sidebar{
+    grid-area: sb;
+    display: grid;
+    place-content: flex-start center;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    /* margin-inline: 5px; */
+    border: 2px solid limegreen;
+    
+}
+/* we make a grid display for the container that is holding the items */
+
+.container{
+    /* min-height: 100px; */
+    display: grid;
+    /* grid-template-columns: 1fr 2fr;  */
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 0.5rem 0.5rem;
+    grid-auto-rows: 200px;
+}
+
+.box:first-child{
+    grid-column: 1/3;
+    grid-row: 1/4;
+    background-color: dodgerblue;
+    display: grid;
+    place-content: center;
+}
+.box:nth-child(2){
+    grid-row: 1/4;
+    grid-column: 3/4;
+    background-color: limegreen;
+}
+.box:nth-child(3){
+    grid-column: 1/3;
+    background-color: purple;
+}
