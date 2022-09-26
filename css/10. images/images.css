@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+body{
+    font-family: Nunito;
+    min-height: 100vh;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    /* padding: 0; */
+}
+
+.profile-pic{
+    width: 35%;
+    padding: 0.5rem;
+}
+
+.profile-pic img{
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    border: 5px solid black;
+    border-radius: 50%;
+    /* padding: 0.5rem; */
+}
+.section{
+    /* background-color: lightgray; */
+    border-bottom: 2px solid black;
+    padding: 1rem;
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.631);
+
+}
+.para{
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px  black;
+    padding: 0.5rem;
+    text-align: center;
+
+    
+}
+
+.header{
+    background-image: url("https://media.istockphoto.com/vectors/seamless-texture-city-map-vector-id1151367058?k=20&m=1151367058&s=612x612&w=0&h=dipPeOdqw0SeHFDj9e0jPzKh5roBks_lO7oCjOt0ZCg=");
+    background-repeat:repeat;
+    background-position: bottom right;
+    background-size:cover ;
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+}    
+.nowrap{
+    white-space: nowrap;
+}
+
+figcaption{
+    position: absolute;
+    left:-100000px
+}
