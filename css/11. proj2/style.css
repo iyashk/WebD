@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body{
+    font-family: Roboto;
+    font-size: 2rem;
+    /* max-width: 600px; */
+    border: 2px solid black;
+    /* margin: 10px auto; */
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    height: 100vh;
+}
+.button-rocket{
+    /* position: fixed; */
+    /* height: 50px;
+    width: 50px; */
+    /* top: 200px; */
+    z-index: 10;
+    font-size: 2rem;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+h2{
+    margin: 0;
+    position:sticky;
+    top: 0;
+    text-align: center;
+}
+footer{
+    background-color: dodgerblue;
+    text-align: center;
+    font-size: 3rem;
+    margin-inline: 1rem;
+}
+h2,footer{
+    height: 100px;
+    line-height: 100px;
+    color: white;
+}
+footer a,footer a:visited{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    cursor: pointer;
+    background-color: white;
+    color: dodgerblue;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    
+}
