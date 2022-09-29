@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Nunito;
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+header,main,nav,footer{
+    display: grid;
+    width: 100%;
+    text-align: center;
+}
+
+header,footer{
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+}
+
+header{
+    top: 0;
+}
+nav{
+    background-color: whitesmoke;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    align-items: center;
+}
+html{
+scroll-behavior: smooth;
+}
+main figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figcaption{
+    margin: 5px;
+    font-weight: bold;
+    /* font */
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px double black;
+}
+
+.profile-card{
+    background-color: lightgray;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 5%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    scroll-margin: 8rem;
+    width: min(100%,350px);
+}
+
+/* Links */
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav ul li{
+    width: 100%;
+}
+li a:visited , li a{
+    color: black;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+}
+li a:hover, li a:focus{
+    display: block;
+    border: 2px solid black;
+    
+    background-color: lightgray;
+    font-size: 2rem;
+    color: black;
+}
+
+footer{
+    bottom: 0;
+}
+
+/* 
+media queries */
+
+@media screen and (min-width:576px) {
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+    .profile-card{
+        width: min(100%,400px);
+    }
+
+    .profile-card:last-child{
+        order: -1;
+        width: min(100%,400px);
+    }
+}
+
+@media screen and (min-width:768px){
+    nav{
+        display: none;
+    }
+    .profile-card{
+        width: min(100%,325px);
+    }
+    .profile-card:last-child{
+        order: 0;
+        width: min(100%,325px);
+        height: auto;
+    }
+}
