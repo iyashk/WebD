@@ -160,7 +160,7 @@ footer{
     }
 }
 
-/* @media screen and (min-width:1200px){
+@media screen and (min-width:1200px){
     main{
         background-color: white;
         padding: 0px;
@@ -170,6 +170,29 @@ footer{
     }
     .profile-card{
         
-        width: min(calc(33.33%-1.5rem),400px);
+        width: min(calc(33.33% - 1.5rem),500px);
     }
-} */
+}
+
+@media screen and (max-height:475px) and (min-aspect-ratio:7/4){
+
+    nav{
+        display: none
+    }
+    h1{
+        font-size: 1.25rem;
+    }
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .profile-card{
+        width: min(calc(33% - 0.5rem),200px);
+    }
+    .profile-card figcaption, .profile-card q{
+        font-size: 1.25rem;
+    }
+}
