@@ -126,7 +126,7 @@ footer{
         width: min(100%,400px);
     }
 
-    .profile-card:nth-child(2){
-        order: 1;
+    .profile-card:last-child{
+        order: -1;
     }
 }
