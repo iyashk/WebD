@@ -128,11 +128,6 @@ figcaption::after{
     top: -10px;
 }
 
-/* figcaption::after{
-    content: "🚀";
-    display: block;
-
-} */
 .profile-card p::before{
     content: "🚀";
     display: block;
@@ -145,7 +140,6 @@ footer{
     bottom: 0;
     text-align: center;
 }
-
 
 @media screen and (min-width:576px){
     main{
