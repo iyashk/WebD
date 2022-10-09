@@ -94,6 +94,9 @@ article figure img{
     color: black;
 }
 
+.profile-card:target{
+    border: 5px solid red;
+}
 figure{
     display: flex;
     flex-flow: column nowrap;
@@ -105,9 +108,24 @@ figcaption{
     font-size: 2rem;
     text-align: center;
     margin: 1rem;
+    /* width: 100%; */
+    position: relative;
+}
+figcaption::before{
+    content: open-quote;
+    font-size: 3rem;
+    font-weight: bolder;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+}
+figcaption::after{
+    content: "🚀";
+    display: block;
+    /* border: 2px solid black; */
 }
 .profile-card p{
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 footer{
     position: sticky;
