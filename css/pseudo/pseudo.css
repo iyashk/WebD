@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+background: radial-gradient(whitesmoke,#465569);
+background-size: 100%;
+min-height: 100vh;
+font-family: Nunito;
+font-size: 1.5rem;
+color: whitesmoke;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #1e293b;
+    text-align: center;
+}
+nav{
+    background-color: whitesmoke;
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+}
+ul li{
+    width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+}
+ul li a:hover, ul li a:focus{
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    border: 2px solid black;
+}
+ul li a:visited{
+    color: black;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    align-items: center;
+    padding: 1rem;
+}
+article figure img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.profile-card{
+    scroll-margin-top: 8rem;
+    width: min(100%,350px);
+    display: flex;
+    flex-direction: column;
+    background-color: #cbd5e1;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+    color: black;
+}
+
+figure{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+figcaption{
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+.profile-card p{
+    margin-top: 1rem;
+}
+footer{
+    position: sticky;
+    background-color: #1e293b;
+    bottom: 0;
+    text-align: center;
+}
+
+
+@media screen and (min-width:576px){
+    main{
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .profile-card{
+        width: min(100%,400px);
+    }
+
+    .profile-card:last-child{
+        order: -1;
+    }
+}
+
+@media screen and (min-width:768px){
+
+    nav{
+        display: none
+    }
+    .profile-card{
+        width: min(100%,325px);
+    }
+    .profile-card figure{
+        flex-direction: column-reverse;
+    }
+
+    .profile-card figcaption{
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width:992px){
+    .profile-card{
+        width: min(100%,400px);
+    }
+    .profile-card:nth-child(2){
+        order: -1;
+    }
+}
+
+@media screen and (min-width:1200px){
+    main{
+        background-color: white;
+        padding: 0px;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .profile-card{
+        
+        width: min(calc(33.33% - 1.5rem),500px);
+    }
+}
+
+@media screen and (max-height:475px) and (min-aspect-ratio:7/4){
+
+    nav{
+        display: none
+    }
+    h1{
+        font-size: 1.25rem;
+    }
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .profile-card{
+        width: min(calc(33% - 0.5rem),200px);
+    }
+    .profile-card figcaption, .profile-card q{
+        font-size: 1.25rem;
+    }
+}
