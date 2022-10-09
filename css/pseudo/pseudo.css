@@ -116,16 +116,28 @@ figcaption::before{
     font-size: 3rem;
     font-weight: bolder;
     position: absolute;
-    left: -20px;
+    left: -30px;
     top: -10px;
 }
 figcaption::after{
+    content: close-quote;
+    font-size: 3rem;
+    font-weight: bolder;
+    position: absolute;
+    right: -30px;
+    top: -10px;
+}
+
+/* figcaption::after{
     content: "🚀";
     display: block;
-    /* border: 2px solid black; */
-}
-.profile-card p{
-    /* margin-top: 1rem; */
+
+} */
+.profile-card p::before{
+    content: "🚀";
+    display: block;
+    font-size: 2rem;
+    text-align: center;
 }
 footer{
     position: sticky;
