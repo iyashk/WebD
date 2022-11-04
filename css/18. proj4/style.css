@@ -28,3 +28,45 @@ header{
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
 }
+
+.header-title-line{
+    padding: 0.25rem 0.5rem;
+    border: 2px solid yellow;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button{
+    background-color: transparent;
+    border: none;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-icon,.menu-icon::before,.menu-icon::after{
+    background-color: var(--HEADER-COLOR);
+    height: 5px;
+    width: 40px;
+    border-radius: 20%;
+    position: absolute;
+}
+
+.menu-icon::after{
+    content: "";
+    transform: translate(-20px,10px);
+}
+.menu-icon::before{
+    content: "";
+    transform: translate(-20px,-10px);
+}
+
+nav{
+    transform-origin:top center ;
+    display: block;
+}
