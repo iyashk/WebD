@@ -6,10 +6,25 @@
     margin: 0;
 }
 
-body{
+html{
     font-family: Nunito;
     font-size: 2rem;
+}
+
+:root{
+    --HEADER-BGCOLOR:#333;
+    --HEADER-COLOR:whitesmoke;
+
+}
+
+body{
     display: flex;
-    flex-flow: column nowrap;
     min-height: 100vh;
+    flex-flow:column nowrap;
+    border: 2px solid black ;
+}
+
+header{
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
 }
