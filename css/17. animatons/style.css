@@ -42,17 +42,46 @@ div:first-child{
 }
 div:nth-child(2){
     background-color: yellow;
-    transform: rotateY(80deg);
+    /* transform: rotateY(80deg); */
 }
 div:nth-child(3){
     background-color: limegreen;
 }
 
-div:last-child:hover{
-    transform: rotate(360deg);
+div:nth-child(2):hover{
+    transform: rotateY(90deg);
     background-color: midnightblue;
     transition-property: background-color,transform;
     transition-timing-function: linear;
-    transition-duration: 2s,2s;
+    transition-duration: 0.4s,0.5s;
     /* transition-delay: 0.3s; */
+}
+
+.animate{
+    animation-name:slide;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    /* animation-delay: 1s; */
+    animation-direction: normal;
+    animation-iteration-count: 4;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    33%{
+        transform: scale(110%,110%) translateX(600px) rotate(180deg);
+    }
+    49%{
+        transform: scale(100%,100%) translateX(0);
+    }
+    66%{
+        transform: scale(110%,110%) translateX(-600px) rotate(-180deg);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
