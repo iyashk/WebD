@@ -32,12 +32,17 @@ main{
     height: 200px;
 }
 
+div{
+    border: 2px solid black;
+}
 
 div:first-child{
     background-color: dodgerblue;
+    transform: scaleX(120%);
 }
 div:nth-child(2){
     background-color: yellow;
+    transform: rotateY(80deg);
 }
 div:nth-child(3){
     background-color: limegreen;
