@@ -72,7 +72,45 @@ nav{
 }
 
 @keyframes showmenu{
-    0%{
-        
+    0%{ 
+        transform: scaleY(0);
     }
+
+    80%{
+        transform: scaleY(1.2);
+    }
+
+    100%{
+        transform: scaleY(100%);
+    }
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+ul li{
+    border-top: 1px solid var(--HEADER-COLOR);
+    text-align: center;
+}
+
+nav a{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+nav a:visited, nav a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:focus, nav a:hover{
+    /* background-color: var(--HEADER-COLOR); */
+    /* color: #333; */
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    animation: showmenu 0.5s ease-in-out forwards;
 }
