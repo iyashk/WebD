@@ -68,7 +68,8 @@ header{
 
 nav{
     transform-origin:top center ;
-    display: block;
+    display: none;
+    animation: showmenu 0.5s ease-in-out forwards;
 }
 
 @keyframes showmenu{
@@ -112,5 +113,21 @@ a:focus, nav a:hover{
     /* color: #333; */
     transform: scale(1.2);
     transition: transform 0.3s;
-    animation: showmenu 0.5s ease-in-out forwards;
+}
+
+
+header:hover .menu-icon, header:focus-within .menu-icon{
+    transform: translateX(-20px) rotate(45deg) ; 
+ }
+
+header:hover .menu-icon::after, header:focus-within .menu-icon::after{
+    transform: rotate(45deg) scaleX(0.6) translateX(-27px) translateY(27px);
+}
+
+header:hover .menu-icon::before, header:focus-within .menu-icon.menu-icon::before{
+    transform: rotate(-30deg) translateY(-20px) scaleX(0.6) translateX(-36px);
+}
+
+header:hover nav, header:focus-within nav{
+    display: block;
 }
