@@ -1,14 +1,14 @@
 const logEvents = require("./logEvents");
 const EventEmitter = require("events");
+const req = require("express/lib/request");
+class Emitter extends EventEmitter {}
+const myEmitter = new Emitter();
 const http = require("http");
 const path = require("path");
 const fs = require("fs");
-const fsPromises = fs.promises;
-
-class Emitter extends EventEmitter {}
+const fsPromises = require("fs").promises;
+myEmitter.on("log", (msg, fileName) => logEvents(msg, fileName));
 const PORT = process.env.PORT || 3500;
-const myEmitter = new Emitter();
-
 const serveFile = async (filePath, contentType, response) => {
   try {
     const rawData = await fsPromises.readFile(
@@ -30,11 +30,10 @@ const serveFile = async (filePath, contentType, response) => {
     response.end();
   }
 };
-
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
+  console.log(req.url, req.method);
   myEmitter.emit("log", `${req.url}\t${req.method}`, "reqLog.txt");
-
   const extension = path.extname(req.url);
 
   let contentType;
@@ -71,13 +70,12 @@ const server = http.createServer((req, res) => {
       ? path.join(__dirname, "views", req.url)
       : path.join(__dirname, req.url);
 
-  // makes .html extension not required in the browser
   if (!extension && req.url.slice(-1) !== "/") filePath += ".html";
 
   const fileExists = fs.existsSync(filePath);
 
   if (fileExists) {
-    // serveFile(filePath, contentType, res);
+    serveFile(filePath, contentType, res);
   } else {
     switch (path.parse(filePath).base) {
       case "old-page.html":
@@ -91,6 +89,11 @@ const server = http.createServer((req, res) => {
       default:
         serveFile(path.join(__dirname, "views", "404.html"), "text/html", res);
     }
+
+    // console.log(path.parse(filePath));
   }
 });
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
